@@ -1,0 +1,55 @@
+{% extends "master.html" %}
+{%load static %}
+
+{% block title %}Blogs - Onward Edu{% endblock %}
+
+
+{% block content %}
+    <!--  Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!--  Get in touch Section -->
+    <section
+      class="bg-light-gray border-top border-primary border-4 d-flex align-items-center justify-content-center min-vh-100">
+      <div class="container py-3">
+        <div class="sign-in card mx-auto shadow-lg">
+          <div class="card-body py-8 px-lg-5">
+            
+              <img src="{%static 'images/logos/logo.png'%}" alt="logo-dark" class="img-fluid">
+            
+            
+            <div class="position-relative hstack justify-content-center">
+              <hr class="my-8 w-100 d-block">
+              <p class="mb-0 fs-3 bg-body px-3 position-absolute top-50 start-50 translate-middle">Login</p>
+            </div>
+            <form class="d-flex flex-column gap-3 form-control border-bottom" method="post">
+              
+
+              {% csrf_token %}
+              {{form}}
+
+              <button class="btn btn-dark w-100 justify-content-center py-2 fw-medium my-7 fs-4 lh-lg">
+                Sign In
+              </button>
+            </form>
+            <p class="text-center mb-1 d-block fw-medium">By creating an account, you agree with our <a
+                 href="/privacypolicy" style="color:#7f55b1; text-decoration: underline;">Privacy Policy</a> and <a href="/termsofcinditions" style="color:#7f55b1; text-decoration: underline;">Terms of Conditions</a>.</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="get-template hstack gap-2">
+    
+    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn">
+      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
+    </button>
+  </div>
+
+   
+    
+{% endblock content %}

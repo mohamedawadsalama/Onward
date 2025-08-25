@@ -1,0 +1,182 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    {% block title %}
+    {% endblock %}
+
+  </title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/logos/edu-favicon.png' %}" />
+  <link rel="stylesheet" href="{% static 'libs/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'libs/aos-master/dist/aos.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+
+<body >
+
+  <!-- Header -->
+  <header class="header position-fixed start-0 top-0 w-100">
+    <div class="container" >
+      <div class="header-wrapper d-flex align-items-center justify-content-between" >
+        <div class="logo">
+          <a href="/" class="logo-white">
+            <img src=" {% static 'images/logos/logo.png' %}" alt="logo" style="width: 200px;" class="img-fluid">
+            <!--<h1>onward</h1>-->
+          </a>
+          <a href="/" class="logo-dark" >
+            <img src="{% static 'images/logos/logo.png' %}" alt="logo" style="width: 200px;" class="img-fluid">
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-primary rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item">
+                      <a href="/" aria-current="true"
+                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Home</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="/about" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">About</a>
+                    </li>
+                    
+                    <li class="header-item">
+                      <a href="/blog" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Blog</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="/services" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Services</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="/contact" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Contact</a>
+                    </li>
+                    
+                  </ul>
+                  <div class="hstack gap-3">
+                    <a href="/signin"
+                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
+                      In</a>
+                    <a href="/signup"
+                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
+                      Up</a>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-dark" href="tel:+1-212-456-7890">+974-212-456-7890</a>
+                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@onwardedu.com</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  {% block content %}
+  {% endblock %}
+
+  
+
+  <footer class="footer  py-5 py-lg-11 py-xl-12" style="background-color:#251e20">
+    <h1 class="mb-5 text-center" style="color:#7f55b1">ONWARD Edu</h1>
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="col-xl-5 mb-8 mb-xl-0">
+          <div class="d-flex flex-column gap-8 pe-xl-5">
+            <h2 class="mb-0 text-white">potential to profession</h2>
+            <div class="d-flex flex-column gap-2">
+              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
+                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
+                info@onwardedu.com
+              </a>
+              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
+                class="link-hover hstack gap-3 text-white fs-5">
+                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
+                info@onwardedu.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
+          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
+            <li><a class="link-hover fs-5 text-white" href="/">Home</a></li>
+            <li><a class="link-hover fs-5 text-white" href="/about">About</a></li>
+            <li><a class="link-hover fs-5 text-white" id="services" href="/services">Services</a></li>
+            <li><a class="link-hover fs-5 text-white" href="/termsofconditions">Terms of Conditions</a></li>
+            <li><a class="link-hover fs-5 text-white" href="/privacypolicy">Privacy Policy</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
+          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
+            <li><a class="link-hover fs-5 text-white" href="#!">Facebook</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#!">Instagram</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
+          <p class="mb-0 text-white text-opacity-70 text-md-end">© ONWARD Edu copyright 2025</p>
+        </div>
+      </div>
+    </div>
+  <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">© ONWARD Edu copyright 2025</p>
+  </footer>
+
+  <div class="get-template hstack gap-2">
+    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn">
+      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
+    </button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'libs/owl.carousel/dist/owl.carousel.min.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="{% static 'libs/aos-master/dist/aos.js"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- solar icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+</body>
+
+</html>
