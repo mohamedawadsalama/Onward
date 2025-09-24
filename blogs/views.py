@@ -42,7 +42,7 @@ def signup(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return render(request, "dashboard.html")
+            return redirect('dashboard')
         else:
             messages.error(request, 'Invalid Information')
             return HttpResponse('invalid information')

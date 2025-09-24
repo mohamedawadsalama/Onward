@@ -16560,7 +16560,7 @@ textarea.form-control-lg {
 
 .marquee-tag {
   width: 200px;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 .marquee-tag:hover {

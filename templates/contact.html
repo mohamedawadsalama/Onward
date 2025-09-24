@@ -1,41 +1,34 @@
 {% extends "master.html" %}
 {%load static %}
 
-{% block title %}Blogs - Onward Edu{% endblock %}
+{% block title %}Contacts - Onward Edu{% endblock %}
 
 
 {% block content %}
    <!--  Page Wrapper -->
   <div class="page-wrapper overflow-hidden">
 
-    <!--  Banner Section -->
+    <!--  Banner Section Start -->
     <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
       style="background-image: url({%static 'images/backgrounds/contact-banner.jpg'%});">
       <div class="container">
         <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
           <div class="row align-items-center">
-            <div class="col-xl-4">
+            <div class="col-xl-12">
               <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
                 data-aos-duration="1000">
-                <img src="{%static 'images/svgs/primary-leaf.svg'%}" alt="" class="img-fluid animate-spin">
-                <p class="mb-0 text-white fs-5 text-opacity-70">Ready to <span class="text-primary">start
-                    something</span> great? Reach out we’d love to hear from you.</p>
+                <img src="  {% static 'images/svgs/tie-purple.svg' %}" alt="" style="height:50px;" class="img-fluid animate-spin">
+                <h1 class="mb-0 fs-12 text-white lh-1 text-decoration-underline" > <span class="text-primary">Chekout </span> <span style="color: #7f55b1;"> Our Contacts </span> </h1>
               </div>
             </div>
           </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1">Contact</h1>
-            <a href="javascript:void(0)" class="p-1 ps-7 bg-primary rounded-pill">
-              <span class="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-              </span>
-            </a>
-          </div>
+          
         </div>
       </div>
     </section>
+    <!--  Banner Section End -->
 
-    <!--  Get in touch Section -->
+    <!--  Contacts Section Start -->
     <section class="get-in-touch py-5 py-lg-11 py-xl-12">
       <div class="container">
         <div class="d-flex flex-column gap-5 gap-xl-10">
@@ -44,9 +37,9 @@
               <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
                 data-aos-duration="1000">
                 <span
-                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">10</span>
-                <hr class="border-line bg-white">
-                <span class="badge text-bg-dark">Contact us</span>
+                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">  </span>
+                <hr class="border-line" style="background-color: #f79630;">
+                <span class="badge text-dark" style="background-color: #f79630;">Contact Us</span>
               </div>
             </div>
             <div class="col-xl-8 col-xxl-7">
@@ -54,43 +47,44 @@
                 <div class="col-xxl-8">
                   <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
-                    <h2 class="mb-0">Get in touch</h2>
+                    <h3 class="mb-0" style="color: #7f55b1;">Checkout Our Location</h3>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row justify-content-between gap-7 gap-xl-0">
+
+            <!-- Contacts Section Start-->
             <div class="col-xl-3">
-              <p class="mb-0 fs-5" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Let’s collaborate
-                and create something amazing! Tell me about your project—I’m all
-                ears.</p>
+              <p class=" fs-6 fw-bolder" style="color:#f79630" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                Our Contacts Details.
+              </p>
+              <ul class=" list-unstyled mb-0 d-flex flex-column gap-1">
+                
+                <li><p class=" fs-5 " style="color:#7f55b1"><i class="bi bi-geo-alt-fill"></i> Doha, Qatar, P.O.Box: 1195</p></li>
+                <li><p class="fs-5  " style="color:#7f55b1"><i class="bi bi-telephone-fill"></i> +974 6629 9779</p></li>
+                <li><p class="fs-5  " style="color:#7f55b1"><i class="bi bi-envelope-fill"></i> info@onwardedu.net</p></li>
+              </ul>
             </div>
+            <!-- Contacts Section End-->
+
+            <!-- Location Section Start-->
             <div class="col-xl-8">
-              <form class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <div>
-                  <input type="text" class="form-control border-bottom border-dark" id="formGroupExampleInput"
-                    placeholder="Name">
-                </div>
-                <div>
-                  <input type="email" class="form-control border-bottom border-dark" id="exampleInputEmail1"
-                    placeholder="Email" aria-describedby="emailHelp">
-                </div>
-                <div>
-                  <textarea class="form-control border-bottom border-dark" id="exampleFormControlTextarea1"
-                    placeholder="Tell us about your project" rows="3"></textarea>
-                </div>
-                <button type="submit" class="button w-100 justify-content-center">
-                  <span class="button-text">Submit message</span>
-                  <iconify-icon icon="lucide:arrow-up-right"
-                    class="button-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
-                </button>
-              </form>
+              
+              <!-- Google Maps Start-->
+              <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230886.62907395157!2d51.347185399172275!3d25.283917557733783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x44d9319f78cfd4b1!2sDoha%2C%20Qatar!5e0!3m2!1sen!2seg!4v1753904479760!5m2!1sen!2seg" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <!-- Google Maps End-->
             </div>
+            <!-- Location Section End-->
+
           </div>
         </div>
       </div>
     </section>
+    <!--  Contacts Section End -->
 
   </div>
 
