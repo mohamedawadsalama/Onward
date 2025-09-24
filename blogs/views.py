@@ -31,6 +31,9 @@ def privacypolicy(request):
 def termsofconditions(request):
     return render(request, "termsofconditions.html")
 
+def faq(request):
+    return render(request, "faqs.html")
+
 def dashboard(request):
     return render(request, "dashboard.html")
 

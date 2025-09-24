@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{% static 'libs/aos-master/dist/aos.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 
@@ -31,18 +31,18 @@
       <div class="header-wrapper d-flex align-items-center justify-content-between" >
         <div class="logo">
           <a href="/" class="logo-white">
-            <img src=" {% static 'images/logos/logo.png' %}" alt="logo" style="width: 200px;" class="img-fluid">
+            <img src=" {% static 'images/logos/edu-favicon.png' %}" alt="logo" style="width: 70px; " class="img-fluid">
             <!--<h1>onward</h1>-->
           </a>
           <a href="/" class="logo-dark" >
-            <img src="{% static 'images/logos/logo.png' %}" alt="logo" style="width: 200px;" class="img-fluid">
+            <img src="{% static 'images/logos/logo.png' %}" alt="logo" style="width: 170px; " class="img-fluid">
           </a>
         </div>
         <div class="d-flex align-items-center gap-4">
 
-          <div class="btn-group">
+          <div class="button-group">
             <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-primary rounded-circle"
+              class=" toggle-menu round-45 p-2 d-flex align-items-center justify-content-center  rounded-circle border-0 "
               type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
               <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
             </button>
@@ -50,45 +50,50 @@
               <div class="d-flex flex-column gap-6">
                 <div class="hstack justify-content-between border-bottom pb-6">
                   <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                  <button type="button" class="button-close opacity-75" aria-label="Close"></button>
                 </div>
                 <div class="d-flex flex-column gap-3">
                   <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
                     <li class="header-item">
                       <a href="/" aria-current="true"
-                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                        class="header-link  hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
                           class="img-fluid animate-spin">Home</a>
                     </li>
                     <li class="header-item">
                       <a href="/about" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
                           class="img-fluid animate-spin">About</a>
                     </li>
                     
                     <li class="header-item">
                       <a href="/blog" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
                           class="img-fluid animate-spin">Blog</a>
                     </li>
                     <li class="header-item">
                       <a href="/services" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
                           class="img-fluid animate-spin">Services</a>
                     </li>
                     <li class="header-item">
                       <a href="/contact" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="{% static 'images/svgs/secondary-leaf.svg ' %}" alt="" width="20" height="20"
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
                           class="img-fluid animate-spin">Contact</a>
+                    </li>
+                    <li class="header-item">
+                      <a href="/helpcenter" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="{% static 'images/svgs/tie-black.svg ' %}" alt="" 
+                          class="img-fluid animate-spin">Help Center</a>
                     </li>
                     
                   </ul>
                   <div class="hstack gap-3">
                     <a href="/signin"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
+                      class="button button-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
                       In</a>
                     <a href="/signup"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
+                      class="button button-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
                       Up</a>
                   </div>
                 </div>
@@ -110,56 +115,85 @@
 
   
 
-  <footer class="footer  py-5 py-lg-11 py-xl-12" style="background-color:#251e20">
+  <footer class="footer  py-4 " style="background-color:#251e20">
     <h1 class="mb-5 text-center" style="color:#7f55b1">ONWARD Edu</h1>
     <div class="container">
       
       <div class="row">
-        
-        <div class="col-xl-5 mb-8 mb-xl-0">
+
+        <!-- Description Start-->
+        <div class="col-xl-4 mb-8 mb-xl-0">
           <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h2 class="mb-0 text-white">potential to profession</h2>
-            <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                info@onwardedu.com
-              </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                info@onwardedu.com
-              </a>
-            </div>
+            <h3 class="mb-0 " style="color:#f79630">Potential to Profession</h3>
+            <p class="mb-0 fs-5 text-opacity-70 text-justify" style="color:#7f55b1">
+                  <span style="color:#ebe95c">Onward</span> is a platform designed to guide students and fresh graduates as they discover their 
+                  path, build strong resumes, and gain real-world skills. 
+                  
+            </p>
           </div>
         </div>
+        <!-- Description End-->
+
+        <!-- Useful Links Start-->
         <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
+          
           <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
+            <li class=" fs-5 fw-bold" style="color:#7f55b1">Useful Links</li>
             <li><a class="link-hover fs-5 text-white" href="/">Home</a></li>
             <li><a class="link-hover fs-5 text-white" href="/about">About</a></li>
-            <li><a class="link-hover fs-5 text-white" id="services" href="/services">Services</a></li>
+            <li><a class="link-hover fs-5 text-white" href="/services">Services</a></li>
+            <li><a class="link-hover fs-5 text-white" href="/helpcenter">Help Center</a></li>
             <li><a class="link-hover fs-5 text-white" href="/termsofconditions">Terms of Conditions</a></li>
             <li><a class="link-hover fs-5 text-white" href="/privacypolicy">Privacy Policy</a></li>
             
+            
+            
           </ul>
         </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="#!">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Instagram</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li>
-          </ul>
-        </div>
+        <!-- Useful Links End-->
+
+        <!-- Contacts Start-->
         <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">© ONWARD Edu copyright 2025</p>
+          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-1">
+            <li class=" fs-5 fw-bold" style="color:#7f55b1">Contacts</li>
+            <li><p class="link-hover fs-5 text-white " ><i class="bi bi-geo-alt-fill"></i> Doha, Qatar, P.O.Box: 1195</p></li>
+            <li><p class="link-hover fs-5 text-white " ><i class="bi bi-telephone-fill"></i> +974 6629 9779</p></li>
+            <li><p class="link-hover fs-5 text-white " ><i class="bi bi-envelope-fill"></i> info@onwardedu.net</p></li>
+          </ul>
         </div>
+        <!-- Contacts End-->
+
+        <!-- Social Media Links Start-->
+        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
+          <ul class="footer-menu list-inline mb-0 d-flex flex-column gap-2">
+            <li class=" fs-5 fw-bold" style="color:#7f55b1">Social Media Links</li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-facebook fs-4"></i> Facebook </a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-twitter-x"></i> Twitter X</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-instagram fs-4"></i> Instagram</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-snapchat"></i> Snapchat</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-tiktok"></i> Tiktok</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-youtube"></i> Youtube</a></li>
+            <li><a class="link-hover fs-5 text-white" href="#"><i class="bi bi-linkedin fs-4"></i> Linkedin</a></li>
+            
+          </ul>
+          
+        </div>
+        <!-- Social Media Links End-->
+
       </div>
     </div>
-  <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">© ONWARD Edu copyright 2025</p>
+    <hr style="color:#f79630">
+    <p class="text-opacity-70 text-md-center m-3 fw-bold mt-xl-4" style="color:#7f55b1">ONWARD Edu ©  copyright 2025. All Rights Reserved</p>
+    
   </footer>
 
+  
+
+  
+
   <div class="get-template hstack gap-2">
-    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
-      id="scrollToTopBtn">
+    <button class="button  p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn" style="background-color:#ebe95c">
       <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
     </button>
   </div>
@@ -172,7 +206,46 @@
   <script>
     AOS.init();
   </script>
-  <script src="{% static 'libs/aos-master/dist/aos.js"></script>
+  <script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:3,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:1500,
+        autoplayHoverPause:true,
+        stagePadding: 50,
+        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+
+    owl.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+    $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[1000])
+    })
+    $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
+  </script>
+  
   <script src="{% static 'js/custom.js' %}"></script>
   <!-- solar icons -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
