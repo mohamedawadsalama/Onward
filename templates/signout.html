@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+{%load static %}
+
+{% block title %}SignOut - Onward Edu{% endblock %}
+
+
+{% block content %}
+    <!--  Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!--  Logout Section Start -->
+    <section
+      class="bg-light-gray border-top border-primary border-4 d-flex align-items-center justify-content-center min-vh-100">
+      <div class="container py-3">
+        <div class="sign-in card mx-auto shadow-lg">
+          <div class="card-body py-8 px-lg-5">
+            
+              <!--<img src="{%static 'images/logos/logo.png'%}" alt="logo-dark" class="img-fluid">-->
+            
+            
+            <div class="position-relative hstack justify-content-center">
+              <hr class="my-8 w-100 d-block">
+              <p class="mb-0 fs-9 fw-bold bg-body px-3 position-absolute top-50 start-50 translate-middle">Login</p>
+            </div>
+
+            
+
+            
+            <p class="text-center mb-1 d-block fw-medium">By creating an account, you agree with our <a
+                 href="/privacypolicy" style="color:#7f55b1; text-decoration: underline;">Privacy Policy</a> and <a href="/termsofcinditions" style="color:#7f55b1; text-decoration: underline;">Terms of Conditions</a>.</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  Signin Section End -->
+
+  </div>
+
+  
+
+   
+    
+{% endblock content %}
